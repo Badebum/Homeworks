@@ -1,55 +1,28 @@
 //Работа с if-else
 
 
-// const a = 1;
 
-// if (a === 0 ) {
-//     console.log("Верно");
-// } else console.log("Неверно");
+// const compareNumber = number => {
+//     if (number === 0) {
+//         return console.log("Верно");
+//     } else return console.log("Неверно");
+// }
 
-// if (a > 0 ) {
-//     console.log("Верно");
-// } else console.log("Неверно");
+// const compareNumber = number => !number ? console.log("Верно") : console.log("Неверно");
+// compareNumber(0)
 
-// if (a < 0 ) {
-//     console.log("Верно");
-// } else console.log("Неверно");
 
-// if (a >= 0 ) {
-//     console.log("Верно");
-// } else console.log("Неверно");
-
-// if (a <= 0 ) {
-//     console.log("Верно");
-// } else console.log("Неверно");
-
-// if (a !== 0 ) {
-//     console.log("Верно");
-// } else console.log("Неверно");
-
-// const a = 'test';
-
-// if (a === 'test' ) {
-//     console.log("Верно");
-// } else console.log("Неверно");
 
 //
 // Работа с логическими переменными
 //
 
-// const test = false;
 
-// if (test) {
-//     console.log("Верно");
-// } else console.log("Неверно");
+// const trueOrFalse = (test) => !test ? console.log("Верно") : console.log("Неверно");
+    
+// trueOrFalse(1)
+// trueOrFalse(0)
 
-// test ? console.log("Верно") : console.log("Неверно")
-
-// if (!test) {
-//     console.log("Верно");
-// } else console.log("Неверно");
-
-// !test ? console.log("Верно") : console.log("Неверно")
 
 
 //
@@ -193,3 +166,50 @@
 // let secondPart = numbers.slice(3, ).split('').reduce((a,b) => +a + +b, 0)
 
 // firstPart == secondPart ? console.log('da'): console.log('net');
+
+
+// Циклы
+
+
+// #1
+
+const increaseNum = (numFrom, numTo) => {
+    
+    for (let i = numFrom; i <= numTo; i++) {
+       return console.log(i);
+    }
+     
+}
+increaseNum( 0, 100 );
+
+
+// let i = 0
+// while (i < 100) {
+//     i++
+//     console.log(i);
+// }
+
+
+//#3
+
+// for (let i = 0; i <= 100; i++) {
+    // if (i % 2 === 0) {
+    //     console.log(i);
+    // }
+// }
+
+// let i = 0
+// while (i < 100) {
+//     i++
+//     if (i % 2 === 0) {
+//         console.log(i);
+//     }
+// }
+
+
+//#4
+
+// for (let i = 0; i <= 100; i++) {
+//     console.log(i);
+    
+// }
