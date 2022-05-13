@@ -173,16 +173,17 @@
 
 // #1
 
-const increaseNum = (numFrom, numTo) => {
+// const increaseNum = (numFrom, numTo) => {
     
-    for (let i = numFrom; i <= numTo; i++) {
-       return console.log(i);
-    }
+//     for (let i = numFrom; i <= numTo; i++) {
+//        return console.log(i);
+//     }
      
-}
-increaseNum( 0, 100 );
+// }
+// increaseNum( 0, 100 );
 
-
+// const sum = (str) => str.split('').reduce((a,b) =>  +a + +b, 0)
+// console.log(sum('334'));
 // let i = 0
 // while (i < 100) {
 //     i++
