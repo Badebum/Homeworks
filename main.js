@@ -167,8 +167,9 @@
 
 // firstPart == secondPart ? console.log('da'): console.log('net');
 
-
-// Циклы
+////////////////////////////////////////////////////
+//////////////////// Циклы ////////////////////////
+////////////////////////////////////////////////////
 
 
 // #1
@@ -193,24 +194,303 @@
 
 //#3
 
-// for (let i = 0; i <= 100; i++) {
-    // if (i % 2 === 0) {
-    //     console.log(i);
-    // }
-// }
 
-// let i = 0
-// while (i < 100) {
-//     i++
+
+// const onlyOddNum = (numFrom, numTo) => {
+// for (let i = numFrom; i <= numTo; i++) {
 //     if (i % 2 === 0) {
 //         console.log(i);
 //     }
 // }
+// }
 
+// onlyOddNum(0 , 100)
 
 //#4
 
-// for (let i = 0; i <= 100; i++) {
-//     console.log(i);
-    
+// const sumOfNum = (firstNum, lastNum) => {
+//     let result = 0;
+//         for (let i = firstNum; i <= lastNum; i++) {
+//         result += i
+//             }
+//     return result;
 // }
+// console.log(sumOfNum(1, 100));
+
+// #5 -
+
+// const factorial = (num) => {
+//     let result = 1;
+//     for (let i = num; i > 0; i--) {
+//         result = result * i
+//     }
+//     return result
+// }
+
+// console.log(factorial(3)); //6
+// console.log(factorial(4)); //24
+// console.log(factorial(5)); //120
+
+// #6
+
+// const cloneNum = (num, amount) => {
+//     let result='';
+// for (let i = 0; i < amount ; i++) {
+//     result +=num;
+    
+//     }
+//     return +result
+// }
+
+// const cloneNum = (num, amount) => +(num+'').repeat(amount)
+
+// console.log(cloneNum(5, 9));
+
+// #7
+
+// const numCycle = () => {
+//     for (let i = 0; i <= 300; i++) {
+//         if (i % 2 === 0  && i % 12 === 0  && i !== 48 && (i / 12) % 2 !== 0) {
+//             console.log('oooops');
+//         } else if (i % 2 !== 0 && i % 3 !== 0) {
+//             console.log('hola');
+//         } else if (!i) {
+//             console.log('zero');
+//         }
+//     }
+// }
+
+// numCycle()
+
+////////////////////////////////////////////
+///////////// Работа с for для массивов/////
+///////////////////////////////////////////
+
+// #1
+// const someArr = [1, 2, 3, 6, 4, 5];
+// const arrPrint = (arr) => {
+//     for (let i = 0; i < arr.length; i++) {
+//         console.log(arr[i]);
+//     }
+//     return arr
+// }
+
+// const arrPrint = (arr) => arr.join(' ');
+
+// console.log(arrPrint(someArr));
+
+// #2
+
+// const arrSum = (arr) => {
+//     let result = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         result += arr[i]
+        
+//     }
+//     return result
+// }
+
+// const arrSum = (arr) => arr.reduce((a, v) => a + v, 0)
+
+// console.log(arrSum(someArr));
+
+
+///////////////////////////////////////////////////////
+///////////////////////Задачи общие.
+//////////////////////////////////////////////////////
+
+// #1
+
+// const someArr = [2, 5, 9, 15, 0, 4];
+
+// const columNums = (arr) => {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] > 3 && arr[i]<10) {
+//             console.log(arr[i]);
+//         }
+//     }
+// }
+
+// const columNums = (arr) => arr.map(a => a > 3 && a < 10 ? console.log(a) : "")
+
+// columNums(someArr)
+
+
+// #2
+
+// const someArr = [2, -5, 9, -15, 0, 4];
+
+// const sumPositiveNum = (arr) => {
+//     let result = 0;
+
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] > 0) {
+//             result += arr[i]
+//         }
+//     }
+//     return result
+// }
+
+
+// const sumPositiveNum = (arr) => arr.filter((num) => num > 0).reduce((a,b) => a+b, 0)
+
+// console.log( sumPositiveNum(someArr));
+
+
+
+// #3
+
+// const someArr = [ 1, 2, 5, 9, 4, 13, 4, 10];
+
+// const findNum = (arr, numToFind) => {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] === numToFind) {
+//             console.log('Yes');
+//         }
+//     }
+// }
+
+// const findNum = (arr, numToFind) => arr.filter((a) => a === numToFind ? console.log('Yes') : '')
+// const findNum = (arr, numToFind) => arr.includes(numToFind) ? console.log('Yes') : '';
+
+// console.log(findNum(someArr, 4));
+
+
+// #4
+
+// const someArr = [10, 20, 30, 50, 235, 4421, 3000];
+
+// const firstValueNum = (arr) => {
+//     for (let i = 0; i < arr.length; i++) {
+//         let str = arr[i] + '';
+//         if (str[0].includes(1) || str[0].includes(2) || str[0].includes(5)) {
+//            console.log(arr[i]);
+//        }
+//     }
+// }
+
+// const firstValueNum = (arr) =>
+//     arr.map((a) => (a + "")[0].includes(1) || (a + "")[0].includes(2) || (a + "")[0].includes(5) ? console.log(a) : '' )
+
+//  firstValueNum(someArr);
+
+
+// #5
+
+// const someArr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+
+// const dashStr = (array) => {
+//     let string = '-';
+//     for (let i = 0; i < array.length; i++) {
+//         string += array[i] + "-"
+//     }
+//     return string;
+// }
+
+// const dashStr = (array) => `-${array.join('-')}-`
+
+// console.log(dashStr(someArr));
+
+
+// #6
+
+// const week = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
+
+// const daysWeek = (arr) => {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] === 'Сб' || arr[i] === 'Вс')        {
+//             document.write("<p>" + arr[i].bold() + "</p>");
+//         }else {
+            // document.write("<p>" + arr[i] + "</p>");
+//     }
+//     }
+// }
+
+
+// const printText = (arg) => document.write("<p>" + arg + "</p>");
+
+// const daysWeek = (arr) =>
+//     arr.map((day) => day === 'Сб' || day === 'Вс'
+//         ? printText(day.bold())
+//         : printText(day))
+
+// daysWeek(week);
+
+
+// #7
+
+// const today = 'Сб';
+
+// const currentDayOfWeek = (arr, currentDay) => {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (arr[i] === currentDay) {
+//             document.write("<p>" + arr[i].italics() + "</p>");
+//         } else {
+//             document.write("<p>" + arr[i] + "</p>");
+//         }
+//     }
+// }
+
+// const currentDayOfWeek = (arr, today) =>
+//     arr.map((day) => day === today
+//         ? printText(day.italics())
+//         : printText(day))
+
+
+// currentDayOfWeek(week, today)
+
+
+// #8
+
+// const divisionNum = (num, divisionTimes, divisionToNum) => {
+//     let amountOfdivision = 0;
+//     let result = 0;
+//     for (let i = num; i >= divisionToNum; i /= divisionTimes) {
+//         result = i;
+//         amountOfdivision++
+//     }
+//     console.log(amountOfdivision);
+//     console.log(result);
+//     return result
+// }
+
+// divisionNum(1000, 2, 50);
+
+
+
+// #9
+
+// const findIntegers = (fromNum, toNum) => {
+//     const arrNumbers = [];
+//     for (let i = fromNum; i <= toNum; i++) {
+//         arrNumbers.push(i)
+        
+//     }
+//     return arrNumbers
+// }
+// console.log(findIntegers(1,20));
+
+
+//#10
+
+// let inputNumb = +prompt('Enter number')
+
+// const sequenceNumb = (num) => {
+//     const  arrayNumb = [num] 
+
+//     while (num !== 1) {
+
+//         if (num % 2 === 0) {
+//             console.log('(делим на 2)', num = num / 2);
+//             arrayNumb.push(num)
+//         } else if (num % 2 !== 0) {
+//             console.log('(умножаем на 3 + 1)', num = num * 3 + 1);
+//             arrayNumb.push(num)
+
+//         }
+//     }
+
+//     return arrayNumb
+// }
+
+// console.log(sequenceNumb(inputNumb));
