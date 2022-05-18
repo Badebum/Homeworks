@@ -66,3 +66,48 @@
 //     number % 2 === 0 ? funcSquare(number) : funcPlus(number);
 
 // console.log(calculationsAndCallback(7, squareNum, plusOne));
+
+// #11  ????????
+
+// const mult = (num1 = 1, num2 = 1, num3 = 2) => {
+//     for (let i = 0; i < num3; i++) {
+//         console.log(num1 * num2);
+//     }
+// }
+
+// console.log(mult(2,3,2));
+
+
+// #12
+
+// const filterWords = (str1, str2, str3) => {
+//     const wordsArr = [str1, str2, str3];
+//     return wordsArr.sort().join(', ')
+// }
+
+// const filterWords = (str1, str2, str3) => [str1, str2, str3].sort().join(', ');
+
+// console.log(filterWords('gamma', 'alfa', 'beta' ));
+
+
+// #13
+
+const isNumberInRange = (num) => num > 0 && num < 10;
+
+const arrayNumbers = [2, 55, 13, 48, 7, 69, 5, 555, 7, 9, 12, 14, 6]
+
+// const filterArrNumbers = (arr, filterForNum) => {
+//     const newArr = [];
+
+//     for (let i = 0; i < arr.length; i++) {
+//         if (filterForNum(arr[i])) {
+//             newArr.push(arr[i])
+//         }
+//     }
+//     return console.log(newArr);
+// };
+
+// const filterArrNumbers = (arr, filterForNum) =>
+//     arr.forEach((elem,id, arr) => filterForNum(elem) ? console.log(arr) : '');
+    
+console.log(filterArrNumbers(arrayNumbers, isNumberInRange));
