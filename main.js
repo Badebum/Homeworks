@@ -92,9 +92,9 @@
 
 // #13
 
-const isNumberInRange = (num) => num > 0 && num < 10;
+// const isNumberInRange = (num) => num > 0 && num < 10;
 
-const arrayNumbers = [2, 55, 13, 48, 7, 69, 5, 555, 7, 9, 12, 14, 6]
+// const arrayNumbers = [2, 55, 13, 48, 7, 69, 5, 555, 7, 9, 12, 14, 6]
 
 // const filterArrNumbers = (arr, filterForNum) => {
 //     const newArr = [];
@@ -107,7 +107,103 @@ const arrayNumbers = [2, 55, 13, 48, 7, 69, 5, 555, 7, 9, 12, 14, 6]
 //     return console.log(newArr);
 // };
 
-// const filterArrNumbers = (arr, filterForNum) =>
-//     arr.forEach((elem,id, arr) => filterForNum(elem) ? console.log(arr) : '');
+// const filterArrNumbers = (arr, filterForNum) =>  arr.map((elem) => filterForNum(elem) ? elem : '').filter(Boolean);
+
+// console.log(filterArrNumbers(arrayNumbers, isNumberInRange));
+
+
+// №14
+
+// const getDigitsSum = (num) => {
+//       let str = num+"";
+//       let sum = 0;
+//       for (let i = 0; i < str.length; i++) {
+//         sum += +str[i];
+//       }
+//       return sum;
+//     }
     
-console.log(filterArrNumbers(arrayNumbers, isNumberInRange));
+// const getDigitsSum = (num) => (num+"").split('').reduce((a,b) => +a + +b, 0);
+
+// console.log(getDigitsSum(332));
+
+// #15
+
+// const getDigitsSum = (num) => (num+"").split('').reduce((a,b) => +a + +b, 0);
+
+// const allYerasDamnDozen = (numStart,numFinal, damnDozen , getDigitsSum) => {
+//     let result = [];
+//     for (let i = numStart; i <= numFinal; i++) {
+//         if (getDigitsSum(i) === damnDozen){
+//             result.push(i)
+//         }
+//     }
+//     return result
+// }
+
+// console.log(allYerasDamnDozen(1, 2022, 13 , getDigitsSum));
+
+// #16
+
+// const isEven = (num) => num % 2 === 0;
+
+// #17
+
+// const arrNum = [5, 2, 5, 76, 0, 33, 12, 1, 7, 566, 3, 22, 123, 9];
+
+// const onlyEvenNum = (arr, func) => arr.map((a) => func(a) ? a : '').filter(Boolean);
+
+// console.log(onlyEvenNum(arrNum, isEven));
+
+
+// #18
+
+// const getDivisors = (num) => {
+//     const result = [];
+//     for (let i = 0; i < num; i++) {
+//         if (num % i === 0) {
+//             result.push(i)
+//         }
+//     }
+//     return result
+// }
+
+
+// console.log(getDivisors(555, 0));
+
+
+// #19
+// const arrNum = [5, 2, 5, 76, 0, 33, 12, 1, 7, 566, 3, 22, 123, 9];
+
+// const recursia = (arr, i) => {
+//  if (i == arr.length) return;
+  
+//   console.log(arr[i]);
+//   recursia(arr, i + 1);
+// }
+
+// recursia(arrNum, 0);
+
+
+// #20
+
+
+
+// const recSum = (num, stopNum) => {
+//     let sum = 0;
+//     let arr = (num + '').split('');
+//     for (let i = 0; i < arr.length; i++) {
+//         sum += parseInt(arr[i]);
+//     }
+
+//     if (sum > stopNum) {
+//         return recSum(sum, stopNum)
+//     }else  return sum
+
+    
+// }
+
+// const recSum = (num, stopNum) =>
+//     (num + '').split('').reduce((a,b) => (sum = (+a + +b)) < stopNum ? sum : recSum(sum, stopNum))
+
+// console.log(recSum(951753, 9));
