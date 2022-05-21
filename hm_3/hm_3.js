@@ -396,49 +396,56 @@
 // #6
 
 // const week = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
+// const printText = (arg, where = document.querySelector('.test')) =>
+//     where.insertAdjacentHTML("beforeEnd", arg + '<br>');
 
-// const daysWeek = (arr) => {
+// const daysWeek = (arr, funcPrint) => {
+//     const div = document.querySelector(".test");
+
 //     for (let i = 0; i < arr.length; i++) {
-//         if (arr[i] === 'Сб' || arr[i] === 'Вс')        {
-//             document.write("<p>" + arr[i].bold() + "</p>");
-//         }else {
-            // document.write("<p>" + arr[i] + "</p>");
-//     }
-//     }
-// }
-
-
-// const printText = (arg) => document.write("<p>" + arg + "</p>");
-
-// const daysWeek = (arr) =>
-//     arr.map((day) => day === 'Сб' || day === 'Вс'
-//         ? printText(day.bold())
-//         : printText(day))
-
-// daysWeek(week);
-
-
-// #7
-
-// const today = 'Сб';
-
-// const currentDayOfWeek = (arr, currentDay) => {
-//     for (let i = 0; i < arr.length; i++) {
-//         if (arr[i] === currentDay) {
-//             document.write("<p>" + arr[i].italics() + "</p>");
+//         if (arr[i] === 'Сб' || arr[i] === 'Вс') {
+//             funcPrint(arr[i].bold(), div);
 //         } else {
-//             document.write("<p>" + arr[i] + "</p>");
+//             funcPrint(arr[i], div);
 //         }
 //     }
 // }
 
-// const currentDayOfWeek = (arr, today) =>
-//     arr.map((day) => day === today
-//         ? printText(day.italics())
-//         : printText(day))
+
+// const daysWeek = (arr, funcPrint) =>
+//     arr.map((day) => day === 'Сб' || day === 'Вс'
+//         ? funcPrint(day.bold())
+//         : funcPrint(day))
+
+// daysWeek(week, printText);
 
 
-// currentDayOfWeek(week, today)
+// #7
+
+// const today = new Date().getDay();
+// const week = ['Пн', 'Вт', 'Ср', 'Чт', 'Пт', 'Сб', 'Вс']
+
+// const printText = (arg, where = document.querySelector('.test')) =>
+//     where.insertAdjacentHTML("beforeEnd", arg + '<br>');
+
+// const currentDayOfWeek = (arr, funcPrint, currentDay) => {
+//     for (let i = 0; i < arr.length; i++) {
+//         if (i === currentDay-1) {
+//             funcPrint(arr[i].italics());
+//         } else {
+//             funcPrint(arr[i]);
+
+//         }
+//     }
+// }
+
+// const currentDayOfWeek = (arr, funcPrint, today) =>
+//     arr.map((day, id) =>  id === today-1 
+//         ? funcPrint(day.italics().bold())
+//         : funcPrint(day))
+
+
+// currentDayOfWeek(week, printText, today)
 
 
 // #8
