@@ -328,5 +328,22 @@
 // меняет указанное свойство объекта. Добавить метод удаление свойства
 // deleteField(fieldName), удаляющий указанное поле. Добавить и изменить поля с
 // помощью этих методов.
+ 
+// const book = {
+//     title: 'some title',
+//     description: '',
+//     addField(fieldName, value) {
+//       return  book[fieldName] = value;
+//      },
+//     editField(fieldName, value) { 
+//         return book[fieldName] = value;
+//      },
+//     deleteField(fieldName) {
+//         return delete book[fieldName]
+//     },
+// }
 
-let 
+// book.addField('my name', 'Andrey')
+// book.editField('description', 'chto?')
+// book.deleteField('title')
+// console.log(book);
