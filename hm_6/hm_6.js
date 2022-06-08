@@ -232,3 +232,17 @@
 // }
 
 // console.log(sameArr([2,3,6,1,22,7,3], [2,3,3,9,3,8,3]));
+
+const obj = {
+    name: 'Дмитрий',
+    getName() {
+        function bar() {
+        console.log(this.name);
+        }
+        
+    },
+    };
+
+console.log(obj.getName());
+console.log(obj.name);
+    
